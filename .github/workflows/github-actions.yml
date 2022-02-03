@@ -16,6 +16,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Postman-test:
+    steps:
       - name: Execute newman action
         uses: matt-ball/newman-action@master
         with:
