@@ -16,7 +16,11 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Postman-test:
+    runs-on:  ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Invoke Newman
         uses: matt-ball/newman-action@master
         with:
           collection: postman_collection.json
-          reporters: cli
