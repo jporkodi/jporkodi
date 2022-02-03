@@ -23,5 +23,5 @@ jobs:
       - name: Invoke Newman
         uses: matt-ball/newman-action@master
         with:
-          collection: jporkodi/postman_collection.json
+          collection: postman_collection.json
           reporters: cli
